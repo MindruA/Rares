@@ -1,0 +1,476 @@
+body {
+    margin: 0;
+  
+   overflow-x: hidden; /* Elimină scroll-ul pe lateral */
+    background-color: #040606;
+}
+
+html, body {
+    overflow-x: hidden; /* Asigură-te că conținutul rămâne în interior */
+    margin: 0;
+    scroll-behavior: smooth;
+}
+video {
+    pointer-events: none; /* Blochează toate interacțiunile utilizatorului */
+    user-select: none;    /* Previne selectarea */
+    touch-action: none;   /* Dezactivează interacțiunile tactile */
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url("Poze/inceput.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asigură-te că este deasupra tuturor */
+    transition: opacity 0.8s ease-out; /* Tranziția opacității */
+    opacity: 1; /* Vizibil inițial */
+}
+.no-scroll {
+    overflow: hidden; /* Dezactivează scroll-ul */
+    height: 100%; /* Previne extinderea conținutului pe verticală */
+}
+#preloader.hidden {
+    opacity: 0; /* Devine invizibil */
+    pointer-events: none; /* Dezactivează interacțiunile */
+}
+
+#preloader-text {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#loading-percentage {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Fundal semi-transparent */
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 10000;
+}
+
+header{
+   
+    width: 100%;
+    height: 15vh;
+    background-color: #1c2128;
+}
+
+#videoback {
+    overflow: hidden; /* Asigură-te că conținutul rămâne în interior */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1); /* Pornim fără zoom */
+    transition: transform 0.1s ease-out;
+}
+
+.videopricipal {
+    overflow: hidden; /* Asigură-te că conținutul rămâne în interior */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.overlay-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%; /* Poziționează textul pe verticală */
+    left: 50%; /* Poziționează textul pe orizontală */
+    transform: translate(-50%, -50%); /* Centrează textul */
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Umbră pentru lizibilitate */
+    z-index: 1; /* Asigură că textul este deasupra videoclipului */
+    font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.struct-container{
+    width: 100%;
+    height:190vh;
+  
+  overflow: hidden;
+}
+.camera1{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #040606;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+#titlu1{
+   
+    z-index: 10;
+    position:absolute;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  text-align: center;
+  white-space: nowrap; /* Evită împărțirea pe mai multe linii */
+}
+#mini4pro{
+
+    
+    position: relative;
+    transform: translateY(25vh);
+  z-index: 20;
+    max-width: 100vw;
+    filter: drop-shadow(-14px 95px 42px #000000);
+}
+.descriere1 {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+#descriere1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transform: perspective(500px) rotateX(60deg) scaleX(0.8) translateY(20vh);
+    transform-origin: center center;
+    position: relative;
+    margin-top: 20px; /* Ridică textul */
+    letter-spacing: 2px;
+    margin: 0 auto; /* Centrează textul */
+    width: 80%; /* Limitează lățimea textului */
+    line-height: 1.2; /* Spațiere între linii pentru lizibilitate */
+    
+}
+
+
+.camera2{
+   
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #04060661;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#titlu2{
+    z-index: 5;
+    position: relative;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  text-align: center;
+  white-space: nowrap; /* Evită împărțirea pe mai multe linii */
+}
+
+#sony7{
+
+    
+    position: relative;
+    transform: translateY(25vh);
+  z-index: 20;
+    max-width: 100vw;
+    filter: drop-shadow(-14px 95px 42px #000000);
+}
+
+
+.descriere2 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    z-index: 15; /* Mai sus decât descriere1 */
+}
+#descriere2 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    opacity: 1;
+    transform: perspective(200px) rotateX(80deg) scaleX(0.8);
+    transform-origin: top center;
+    position: relative;
+    margin-top: 20px; /* Ridică textul */
+    letter-spacing: 2px;
+    margin: 0 auto; /* Centrează textul */
+    width: 90%; /* Limitează lățimea textului */
+    line-height: 1.2; /* Spațiere între linii pentru lizibilitate */
+    
+}
+.partea2{
+    width: 100vw;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 5vh;
+}
+#videoaer{
+     width: 100%; /* Asigură că ocupă toată lățimea paginii */
+    max-width: 100%; /* Previne depășirea limitei de lățime */
+    height: auto; /* Păstrează proporțiile video-ului */
+    object-fit: cover; /* Asigură că video-ul acoperă tot spațiul disponibil */
+    margin: 0 auto; /* Centrează video-ul */
+    display: block; /* Evită posibilele comportamente inline */
+}
+#videoaer2{
+    
+    width: 100%; /* Asigură că ocupă toată lățimea paginii */
+   max-width: 100%; /* Previne depășirea limitei de lățime */
+   height: auto; /* Păstrează proporțiile video-ului */
+   object-fit: cover; /* Asigură că video-ul acoperă tot spațiul disponibil */
+   margin: 0 auto; /* Centrează video-ul */
+   display: block; /* Evită posibilele comportamente inline */
+   position: relative;
+}
+
+
+
+#forma1{
+ 
+    border-top: 5vw solid #000000;
+    border-bottom: 5vw solid #000000;
+   display: flex;
+   justify-content: center;
+  
+    height: 50vh;
+   
+    background: #000000;
+  
+   
+}
+
+#scrisp2{
+    font-family: "Lexend Zetta", serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    font-style: normal;
+    background: linear-gradient(35deg, #6ea5e0, #181c30); /* Gradientul dorit */
+    -webkit-background-clip: text; /* Aplică gradientul doar pe text */
+    -webkit-text-fill-color: transparent; /* Face fundalul textului transparent */
+}
+
+#scrisp2B{
+    font-family: "Lexend Zetta", serif;
+    text-align: center;
+    font-weight: 900;
+    font-size: 3rem;
+    font-style: normal;
+    background: linear-gradient(35deg, #151722, #6ea5e0); /* Gradientul dorit */
+    -webkit-background-clip: text; /* Aplică gradientul doar pe text */
+    -webkit-text-fill-color: transparent; /* Face fundalul textului transparent */
+    padding-top: 20vw;
+    padding-bottom: 20vw;
+}
+#scrisp2P{
+    background: linear-gradient(35deg, #6ea5e0, #16171f); /* Gradientul dorit */
+    -webkit-background-clip: text; /* Aplică gradientul doar pe text */
+    -webkit-text-fill-color: transparent; /* Face fundalul textului transparent */
+}
+#scrisp2, #scrisp2B, #scrisp2P {
+    font-family: "Lexend Zetta", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0.5; /* Text semi-transparent */
+    text-align: center;
+    transition: all 0.3s ease-out;
+    
+   
+}
+
+
+
+.partea3{
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(255, 253, 253);
+    overflow: hidden;
+ 
+    
+
+}
+.partea3 img{
+    max-width: 100vw;
+z-index: 1000;
+    filter: drop-shadow(-73px 74px 46px #ffffff3c);
+}
+#RS4{
+    padding-top: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#stabi{
+    font-family: "Rowdies", serif;
+    font-weight: 300;
+    font-style: normal;
+font-size: 2rem;
+z-index: 10000;
+text-align: center;
+
+}
+#stabi span {
+    display: inline-block; /* Asigură-te că fiecare cuvânt este animabil */
+    color: gray; /* Culoarea inițială */
+    opacity: 0.5; /* Semi-transparent */
+    transition: color 0.3s ease, opacity 0.3s ease; /* Tranziții pentru efect */
+}
+#videors4 video{
+    max-width: 100vw;
+}
+.hexagon {
+    position: absolute;
+
+    --p: 150px; /* control the shape (can be percentage) */
+    height: 50vh;
+    aspect-ratio: 3/2;
+    clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);
+    background: #000000;
+    transform: translateX(-20vh) translateY(-10vh);
+}
+#filmarevet{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.hexagon2 {
+   width: 100vw;
+    height: 80vh;
+    background: linear-gradient(transparent 17%, #000000 100%);
+    
+}
+#stabvideo{
+   
+    width: 100vw;
+}
+#vidvertical{
+    color: white;
+    background-color: #000000;
+    font-family: "Rowdies", serif;
+    font-weight: 300;
+    font-style: normal;
+font-size: 2rem;
+z-index: 10000;
+text-align: center;
+}
+.hexagon3{
+    margin: 0;
+    width: 100vw;
+    height: 70vh;
+  background-color: #000000;
+}
+
+
+
+
+
+.partea4{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+#microfon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mic{
+    background-color: red;
+    max-height: 50vh;
+}
+
+
+
+@-webkit-keyframes slide-in-blurred-bottom {
+    0% {
+      -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+              transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred-bottom {
+    0% {
+      -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+              transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
